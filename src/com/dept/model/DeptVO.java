@@ -2,12 +2,13 @@ package com.dept.model;
 
 import com.emp.model.EmpVO;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  * Created by Alvin on 2014/10/1.
  */
-public class DeptVO {
+public class DeptVO implements Serializable{
     private Integer deptno;
     private String dname;
     private String loc;

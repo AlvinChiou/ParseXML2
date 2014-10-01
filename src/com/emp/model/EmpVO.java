@@ -1,12 +1,14 @@
 package com.emp.model;
 
 import com.dept.model.DeptVO;
+
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
  * Created by Alvin on 2014/10/1.
  */
-public class EmpVO {
+public class EmpVO implements Serializable{
     private Integer empno;
     private String ename;
     private String job;
