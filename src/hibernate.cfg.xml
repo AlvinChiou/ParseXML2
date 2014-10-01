@@ -13,7 +13,7 @@
         <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <mapping resource="com/dept/model/dept.hbm.xml"/>
-        <mapping resource="com/com/emp/model/emp.hbm.xml"/>
+        <mapping resource="com/emp/model/emp.hbm.xml"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>

@@ -1,4 +1,4 @@
-package com.com.emp.model;
+package com.emp.model;
 
 import com.dept.model.DeptVO;
 import java.sql.Date;

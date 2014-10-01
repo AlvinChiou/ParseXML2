@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.com.emp.model.EmpVO" table="EMP" schema="" catalog="test">
+    <class name="com.emp.model.EmpVO" table="EMP" schema="" catalog="test">
         <id name="empno">
             <column name="EMPNO" sql-type="int" not-null="true"/>
         </id>

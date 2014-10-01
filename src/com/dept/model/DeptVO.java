@@ -1,6 +1,6 @@
 package com.dept.model;
 
-import com.com.emp.model.EmpVO;
+import com.emp.model.EmpVO;
 
 import java.util.Collection;
 
