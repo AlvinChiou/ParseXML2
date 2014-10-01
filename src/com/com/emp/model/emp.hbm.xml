@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.com.emp.model.EmpVO" table="EMP" schema="" catalog="test">
+        <id name="empno">
+            <column name="EMPNO" sql-type="int" not-null="true"/>
+        </id>
+        <property name="ename">
+            <column name="ENAME" sql-type="varchar" length="10"/>
+        </property>
+        <property name="job">
+            <column name="JOB"/>
+        </property>
+        <property name="hiredate">
+            <column name="HIREDATE"/>
+        </property>
+        <property name="sal">
+            <column name="SAL"/>
+        </property>
+        <property name="comm">
+            <column name="COMM"/>
+        </property>
+        <many-to-one name="deptByDeptno" class="com.dept.model.DeptVO">
+            <column name="DEPTNO" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

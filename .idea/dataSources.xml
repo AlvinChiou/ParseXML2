@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3029356942">
+    <data-source source="LOCAL" name="MySQL - test@54.64.79.165" uuid="0f501a10-1273-4d53-b132-7d62da0a62f0">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://54.64.79.165:3306/test</jdbc-url>
+      <user-name>alvin</user-name>
+      <user-password>dfe9dfeedf9fdf98df9adf8bdfeadfccdfce</user-password>
+      <ssl-ca-cert>C:\Dropbox\AmazonEC2\SSL_Client_Cert\ca-cert.pem</ssl-ca-cert>
+      <use-ssl>true</use-ssl>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="useSSL" value="true" />
+        <property name="requireSSL" value="true" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
