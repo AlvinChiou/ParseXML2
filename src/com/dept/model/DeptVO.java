@@ -3,7 +3,8 @@ package com.dept.model;
 import com.emp.model.EmpVO;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Alvin on 2014/10/1.
@@ -12,7 +13,7 @@ public class DeptVO implements Serializable{
     private Integer deptno;
     private String dname;
     private String loc;
-    private Collection<EmpVO> empsByDeptno;
+    private Set<EmpVO> empsByDeptno = new HashSet<EmpVO>();
 
     public int getDeptno() {
         return deptno;
@@ -60,11 +61,11 @@ public class DeptVO implements Serializable{
         return result;
     }
 
-    public Collection<EmpVO> getEmpsByDeptno() {
+    public Set<EmpVO> getEmpsByDeptno() {
         return empsByDeptno;
     }
 
-    public void setEmpsByDeptno(Collection<EmpVO> empsByDeptno) {
+    public void setEmpsByDeptno(Set<EmpVO> empsByDeptno) {
         this.empsByDeptno = empsByDeptno;
     }
 }

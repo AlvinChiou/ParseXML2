@@ -13,8 +13,8 @@ public class EmpVO implements Serializable{
     private String ename;
     private String job;
     private Date hiredate;
-    private Integer sal;
-    private Integer comm;
+    private Double sal;
+    private Double comm;
     private DeptVO deptByDeptno;
 
     public int getEmpno() {
@@ -49,19 +49,19 @@ public class EmpVO implements Serializable{
         this.hiredate = hiredate;
     }
 
-    public Integer getSal() {
+    public Double getSal() {
         return sal;
     }
 
-    public void setSal(Integer sal) {
+    public void setSal(Double sal) {
         this.sal = sal;
     }
 
-    public Integer getComm() {
+    public Double getComm() {
         return comm;
     }
 
-    public void setComm(Integer comm) {
+    public void setComm(Double comm) {
         this.comm = comm;
     }
 

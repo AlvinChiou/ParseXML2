@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="MySQL - test@54.64.79.165" uuid="0f501a10-1273-4d53-b132-7d62da0a62f0">
-    <database-info product="MySQL" version="5.5.39-MariaDB-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+  <data-source source="LOCAL" name="MiriaDB - test@54.64.79.165" uuid="0f501a10-1273-4d53-b132-7d62da0a62f0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
     <schema name="" catalog="bidmarket"/>
     <schema name="" catalog="information_schema"/>
     <schema name="" catalog="mysql"/>

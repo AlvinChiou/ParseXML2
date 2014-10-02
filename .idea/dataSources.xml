@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3029356942">
-    <data-source source="LOCAL" name="MySQL - test@54.64.79.165" uuid="0f501a10-1273-4d53-b132-7d62da0a62f0">
+  <component name="DataSourceManagerImpl" format="xml" hash="837356760">
+    <data-source source="LOCAL" name="MiriaDB - test@54.64.79.165" uuid="0f501a10-1273-4d53-b132-7d62da0a62f0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
