@@ -7,6 +7,7 @@ import java.util.Map;
  * Created by AlvinChiou on 2014/10/2.
  */
 public class EmpDAO implements EmpDAO_interface{
+    private final String GET_ALL_STMT = "FROM EmpVO ORDER BY empno";
     @Override
     public void create(EmpVO empVO) {
 

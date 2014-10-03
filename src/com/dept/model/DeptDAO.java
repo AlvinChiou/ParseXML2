@@ -9,6 +9,7 @@ import java.util.Set;
  * Created by AlvinChiou on 2014/10/2.
  */
 public class DeptDAO implements DeptDAO_interface{
+    private final String GET_ALL_STMT = "FROM DeptVO ORDER BY deptno";
     @Override
     public void create(DeptVO deptVO) {
 
