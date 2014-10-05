@@ -11,7 +11,12 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
         <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+       <!-- 以下這行設定為thread才會支援getCurrentSession()，交易管理類型為JDBC -->
         <property name="hibernate.current_session_context_class">thread</property>
+       <!--假如交易管理使用Java Transaction API(JTA)的話，則使用以下這行配置。-->
+       <!--目前支援JTA的AP Server為JBoss, WebLogic, WebSphere-->
+        <!--<property name="hibernate.current_session_context_class">jta</property>-->
+
         <mapping resource="com/dept/model/dept.hbm.xml"/>
         <mapping resource="com/emp/model/emp.hbm.xml"/>
         <!-- DB schema will be updated if needed -->
