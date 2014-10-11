@@ -37,7 +37,15 @@ public class DeptDAO implements DeptDAO_interface{
 
     @Override
     public void update(DeptVO deptVO) {
+        sessionFactory = HibernateUtil.getSessionFactory();
+        try{
+            sessionFactory.getCurrentSession().beginTransaction();
 
+            sessionFactory.getCurrentSession().getTransaction().commit();
+        }catch (RuntimeException e){
+            sessionFactory.getCurrentSession().getTransaction().rollback();
+            throw e;
+        }
     }
 
     @Override
