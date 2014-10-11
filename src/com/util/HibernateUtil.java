@@ -1,9 +1,11 @@
+package com.util;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
  * Created by AlvinChiou on 2014/10/4.
- * HibernateUtil 是一個全域的 SessionFactory，所有應用程式應該共用一個SessionFactory
+ * com.util.HibernateUtil 是一個全域的 SessionFactory，所有應用程式應該共用一個SessionFactory
  * 此類別設計為Static Initializer，Singleton 只會直行一次，在大型系統環境之中經常被使用
  */
 public class HibernateUtil {
