@@ -29,7 +29,7 @@ public class DeptDAO implements DeptDAO_interface{
         try {
             session.beginTransaction();
             //資料庫操作邏輯寫在這裡...
-
+            session.saveOrUpdate(deptVO);
             session.getTransaction().commit();
         }catch (RuntimeException e){
             //一旦發生例外事件執行rollback
@@ -43,7 +43,7 @@ public class DeptDAO implements DeptDAO_interface{
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
-
+            session.saveOrUpdate(deptVO);
             session.getTransaction().commit();
         }catch (RuntimeException e){
             session.getTransaction().rollback();
@@ -66,6 +66,15 @@ public class DeptDAO implements DeptDAO_interface{
 
     @Override
     public DeptVO findByPK(Integer deptno) {
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            DeptVO deptVO = (DeptVO)session.get(DeptVO.class,deptno);
+//            session.get(deptVO);
+            session.getTransaction().commit();
+        }catch(RuntimeException e){
+            session.getTransaction().rollback();
+        }
         return null;
     }
 
