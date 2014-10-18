@@ -1,5 +1,7 @@
 package com.dept.model;
 
+import java.util.List;
+
 /**
  * Created by AlvinChiou on 2014/10/14.
  */
@@ -23,4 +25,11 @@ public class DeptService {
         deptDAO.update(deptVO);
         return deptVO;
     }
+    public DeptVO findByPk(Integer deptno){
+        return deptDAO.findByPK(deptno);
+    }
+    public List<DeptVO> getAll(){
+        return deptDAO.getAll();
+    }
+
 }
