@@ -56,7 +56,8 @@ public class DeptDAO implements DeptDAO_interface{
         session = HibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
-
+            DeptVO deptVO = (DeptVO)session.get(DeptVO.class, deptno);
+            session.delete(deptVO);
             session.getTransaction().commit();
         }catch (RuntimeException e){
             session.getTransaction().rollback();
@@ -67,15 +68,15 @@ public class DeptDAO implements DeptDAO_interface{
     @Override
     public DeptVO findByPK(Integer deptno) {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
+        DeptVO deptVO = null;
         try{
             session.beginTransaction();
-            DeptVO deptVO = (DeptVO)session.get(DeptVO.class,deptno);
-//            session.get(deptVO);
+            deptVO = (DeptVO)session.get(DeptVO.class,deptno);
             session.getTransaction().commit();
         }catch(RuntimeException e){
             session.getTransaction().rollback();
         }
-        return null;
+        return deptVO;
     }
 
     @Override

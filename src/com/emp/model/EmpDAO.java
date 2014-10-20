@@ -1,5 +1,8 @@
 package com.emp.model;
 
+import com.util.HibernateUtil;
+import org.hibernate.Session;
+
 import java.util.List;
 import java.util.Map;
 
@@ -8,14 +11,31 @@ import java.util.Map;
  */
 public class EmpDAO implements EmpDAO_interface{
     private final String GET_ALL_STMT = "FROM EmpVO ORDER BY empno";
+    Session session = null;
     @Override
     public void create(EmpVO empVO) {
-
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.saveOrUpdate(empVO);
+            session.getTransaction().commit();
+        }catch (RuntimeException e){
+            session.getTransaction().rollback();
+            throw e;
+        }
     }
 
     @Override
     public void update(EmpVO empVO) {
-
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.saveOrUpdate(empVO);
+            session.getTransaction().commit();
+        }catch (RuntimeException e){
+            session.getTransaction().rollback();
+            throw e;
+        }
     }
 
     @Override
