@@ -15,7 +15,7 @@ public class EmpVO implements Serializable{
     private Date hiredate;
     private Double sal;
     private Double comm;
-    private DeptVO deptByDeptno;
+    private DeptVO deptVO;
 
     public int getEmpno() {
         return empno;
@@ -93,11 +93,11 @@ public class EmpVO implements Serializable{
         return result;
     }
 
-    public DeptVO getDeptByDeptno() {
-        return deptByDeptno;
+    public DeptVO getDeptVO() {
+        return deptVO;
     }
 
-    public void setDeptByDeptno(DeptVO deptByDeptno) {
-        this.deptByDeptno = deptByDeptno;
+    public void setDeptVO(DeptVO deptVO) {
+        this.deptVO = deptVO;
     }
 }

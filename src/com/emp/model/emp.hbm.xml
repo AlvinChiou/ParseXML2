@@ -23,7 +23,7 @@
         <property name="comm">
             <column name="COMM"/>
         </property>
-        <many-to-one name="deptByDeptno" class="com.dept.model.DeptVO">
+        <many-to-one name="deptVO" class="com.dept.model.DeptVO" lazy="false">
             <column name="DEPTNO" not-null="true"/>
         </many-to-one>
     </class>

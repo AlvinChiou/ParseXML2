@@ -40,7 +40,17 @@ public class EmpDAO implements EmpDAO_interface{
 
     @Override
     public void delete(Integer empno) {
-
+        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        EmpVO empVO = null;
+        try {
+            session.beginTransaction();
+            empVO = (EmpVO)session.get(EmpVO.class, empno);
+            session.delete(empVO);
+            session.getTransaction().commit();
+        }catch (RuntimeException e){
+            session.getTransaction().rollback();
+            throw e;
+        }
     }
 
     @Override
